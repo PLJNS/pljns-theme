@@ -9,21 +9,21 @@
 
 get_header();
 ?>
+<div class="pure-g">
+    <main id="primary" class="site-main pure-u-1 pure-u-md-3-4 pr-md-2">
 
-	<main id="primary" class="site-main">
+        <?php if ( have_posts() ) : ?>
 
-		<?php if ( have_posts() ) : ?>
-
-			<header class="page-header">
-				<h1 class="page-title">
-					<?php
+        <header class="page-header">
+            <h1 class="page-title">
+                <?php
 					/* translators: %s: search query. */
 					printf( esc_html__( 'Search Results for: %s', 'pljns' ), '<span>' . get_search_query() . '</span>' );
 					?>
-				</h1>
-			</header><!-- .page-header -->
+            </h1>
+        </header><!-- .page-header -->
 
-			<?php
+        <?php
 			/* Start the Loop */
 			while ( have_posts() ) :
 				the_post();
@@ -46,8 +46,9 @@ get_header();
 		endif;
 		?>
 
-	</main><!-- #main -->
+    </main><!-- #main -->
 
-<?php
-get_sidebar();
-get_footer();
+    <?php
+get_sidebar(); ?>
+</div>
+<?php get_footer();?>

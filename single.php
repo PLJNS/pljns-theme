@@ -10,7 +10,7 @@
 get_header();
 ?>
 <div class="pure-g">
-    <main id="primary" class="site-main pure-u-1 pure-u-md-3-4 ">
+    <main id="primary" class="site-main pure-u-1 pure-u-md-3-4 pr-md-2">
 
         <?php
 		while ( have_posts() ) :
