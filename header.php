@@ -27,22 +27,14 @@
     <div id="page" class="site">
         <header id="masthead" class="site-header">
             <div class="site-branding  text-center">
-                <?php
-			the_custom_logo();
-				?>
+                <?php the_custom_logo(); ?>
                 <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"
                         rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-                <?php
 
-			$pljns_description = get_bloginfo( 'description', 'display' );
-			if ( $pljns_description || is_customize_preview() ) :
-				?>
                 <p class="site-description">
-                    <?php echo $pljns_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+                    <?php echo get_bloginfo( 'description', 'display' ); ?>
                 </p>
-                <?php endif; ?>
-            </div><!-- .site-branding -->
-
+            </div>
             <nav id="site-navigation" class="main-navigation ">
                 <?php
 			wp_nav_menu(
@@ -54,5 +46,5 @@
 				
 			);
 			?>
-            </nav><!-- #site-navigation -->
-        </header><!-- #masthead -->
+            </nav>
+        </header>
