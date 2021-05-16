@@ -102,3 +102,54 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import "utilities/alignments";
 
 @import "../node_modules/water.css/out/water";
+
+@import "../node_modules/purecss/build/grids";
+@import "../node_modules/purecss/build/grids-responsive";
+
+body {
+  max-width: none;
+  margin: initial;
+}
+
+.page_item {
+  padding-right: 0.5rem;
+}
+
+.cat-links {
+  padding-right: 0.25rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.pl-1 {
+  padding-left: 1rem;
+}
+
+html,
+button,
+input,
+select,
+textarea,
+.pure-g [class*="pure-u"] {
+  /* Set your content font stack here: */
+  font-family: $font__main;
+}
+
+@media screen and (min-width: 48em) {
+  .pr-md-1 {
+    padding-right: 1rem;
+  }
+  .pr-md-2 {
+    padding-right: 2rem;
+  }
+}
+
+.pt-1 {
+  padding-top: 1rem;
+}
